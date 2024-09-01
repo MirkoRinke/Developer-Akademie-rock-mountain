@@ -1,0 +1,603 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "PT Sans", sans-serif;
+  scrollbar-color: rgb(175, 133, 73) rgb(65, 65, 65);
+  scrollbar-width: thin;
+}
+/*@media*/
+
+/** 1216px oder schmaler */
+$breakpoint-lg: 76em;
+
+/** 992px oder schmaler */
+$breakpoint-md: 62em;
+
+/** 768px oder schmaler */
+$breakpoint-sm: 48em;
+
+/** 576px oder schmaler */
+$breakpoint-xs: 36em;
+
+/** 320px oder schmaler */
+$breakpoint-xxs: 20em; //
+
+/** Breakpoints */
+/*
+@media (max-width: $breakpoint-lg) {}
+
+@media (max-width: $breakpoint-md) {}
+
+@media (max-width: $breakpoint-sm) {}
+
+@media (max-width: $breakpoint-xs) {}
+
+@media (max-width: $breakpoint-xxs) {}
+*/
+
+.upcoming_show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(./img/header.png);
+  background-position: 50% 10%;
+  background-size: cover;
+  height: 100vh;
+
+  &--navbar {
+    width: calc(100vw - 25%);
+    height: 120px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      margin-top: 10px;
+    }
+
+    &--logo {
+      & img {
+        height: 6.25rem;
+        margin-right: 2rem;
+        @media (max-width: $breakpoint-lg) {
+          height: 5.25rem;
+        }
+
+        @media (max-width: $breakpoint-md) {
+          height: 4.25rem;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          height: 3.25rem;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          height: 2.25rem;
+        }
+
+        @media (max-width: $breakpoint-xxs) {
+          height: 1.25rem;
+        }
+      }
+    }
+    &--links {
+      display: flex;
+      align-items: center;
+      gap: 6.25rem;
+
+      &--text {
+        display: flex;
+        gap: 6.25rem;
+
+        @media (max-width: $breakpoint-lg) {
+          gap: 5.25rem;
+        }
+
+        @media (max-width: $breakpoint-md) {
+          gap: 2.5rem;
+          margin-left: 2rem;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          display: none;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          display: none;
+        }
+
+        @media (max-width: $breakpoint-xxs) {
+          display: none;
+        }
+
+        & a {
+          font-weight: 400;
+          color: white;
+          font-size: 1.5rem;
+          text-decoration: none;
+          transition: color 0.2s ease-in-out;
+
+          @media (max-width: $breakpoint-lg) {
+            font-size: 1rem;
+          }
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            transition: color 0.2s ease-in-out;
+            color: rgb(175, 133, 73);
+          }
+        }
+      }
+
+      &--icons {
+        display: flex;
+        gap: 3rem;
+
+        @media (max-width: $breakpoint-lg) {
+          gap: 2.5rem;
+        }
+
+        @media (max-width: $breakpoint-md) {
+          gap: 1.1rem;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          gap: 0.8rem;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          gap: 1rem;
+        }
+
+        @media (max-width: $breakpoint-xxs) {
+          gap: 0.5rem;
+        }
+
+        & a {
+          height: 30px;
+          & img {
+            height: 100%;
+
+            transition: filter 0.2s ease-in-out;
+
+            &:hover {
+              transition: filter 0.2s ease-in-out;
+              filter: brightness(0) saturate(100%) invert(51%) sepia(60%) saturate(363%) hue-rotate(356deg) brightness(95%) contrast(90%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+
+    &--heading {
+      font-size: 112px;
+      font-family: "Viga";
+      font-weight: 400;
+      color: white;
+      text-transform: uppercase;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 90px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 60px;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        font-size: 30px;
+      }
+    }
+
+    &--sub_heading {
+      font-size: 40px;
+      color: white;
+      font-weight: 400;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 30px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: 25px;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        font-size: 20px;
+      }
+    }
+
+    &--button {
+      background-color: rgb(175, 133, 73);
+      color: white;
+      text-decoration: none;
+      margin-top: 50px;
+      padding: 10px 15px;
+      min-width: 180px;
+      text-align: center;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.featured {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(14, 14, 14);
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &--content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: calc(100vw - 25%);
+    max-height: fit-content;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+
+    &--card-container {
+      perspective: 800px;
+    }
+
+    &--cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      max-height: 500px;
+      max-width: 500px;
+      height: 100%;
+      width: 100%;
+      padding: 25px;
+      aspect-ratio: 1;
+
+      transition: transform 0.5s ease-in-out;
+      transform: rotateY(calc(calc(var(--mouse-x, 0.5) - 0.5) * 30deg)) rotateX(calc(calc(var(--mouse-y, 0.5) - 0.5) * -30deg));
+
+      &:hover {
+        transition: transform 0.1s ease-in-out;
+      }
+
+      & h3 {
+        max-width: 350px;
+        width: 100%;
+        font-size: 32px;
+        color: rgb(175, 133, 73);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        text-align: left;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 24px;
+        }
+      }
+
+      & img {
+        max-height: 350px;
+        max-width: 350px;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+    }
+  }
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(39, 39, 39);
+
+  &--content {
+    display: flex;
+    align-items: center;
+    // width: calc(100vw - 25%);
+    max-width: 1440px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & img {
+      max-height: 400px;
+      max-width: 400px;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1;
+
+      @media (max-width: $breakpoint-lg) {
+        max-height: 250px;
+        max-width: 250px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        max-height: 400px;
+        max-width: 400px;
+      }
+    }
+
+    &--description {
+      max-width: 800px;
+      width: 100%;
+      padding: 30px 50px 30px 50px;
+      color: white;
+      max-height: 400px;
+      height: 100%;
+
+      @media (max-width: $breakpoint-sm) {
+        padding: 0px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      & h3 {
+        font-size: 16px;
+        font-weight: 100;
+      }
+
+      & h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      & p {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+    }
+
+    &--vertical_line {
+      background-color: white;
+      width: 2px;
+      height: 70%;
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+
+    &--buy {
+      min-width: max-content;
+      padding: 100px;
+
+      @media (max-width: $breakpoint-lg) {
+        padding: 25px;
+      }
+
+      &--button {
+        display: block;
+        background-color: rgb(175, 133, 73);
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        width: 180px;
+        text-align: center;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+
+  background-color: white;
+
+  &--textarea {
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(175, 133, 73);
+    margin: 60px 0px;
+    width: calc(100vw - 25%);
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 40px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+    }
+  }
+}
+
+.video {
+  background-image: url(./img/bottom.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: black;
+
+  &--ref {
+    font-size: 14px;
+    color: white;
+    & a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
+
+    &--textarea {
+      width: 50%;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      padding-top: 50px;
+
+      @media (max-width: $breakpoint-lg) {
+        font-size: 24px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    &--soziale {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 50%;
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      &--icons {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 50px;
+
+        & img {
+          height: 50px;
+          border: 2px solid transparent;
+          border-radius: 5px;
+
+          transition: animation 0.2s ease;
+
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.1);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+
+          &:hover {
+            animation: pulse 1s infinite;
+          }
+        }
+      }
+
+      &--email {
+        display: flex;
+
+        @media (max-width: $breakpoint-sm) {
+          flex-direction: column;
+        }
+
+        & input {
+          height: 50px;
+          width: 250px;
+
+          padding-left: 20px;
+
+          border: 2px solid transparent;
+          border-radius: 5px 0px 0px 5px;
+
+          @media (max-width: $breakpoint-sm) {
+            border-radius: 5px;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & button {
+          border: 2px solid transparent;
+          border-radius: 0px 5px 5px 0px;
+          height: 50px;
+          width: 200px;
+          text-transform: uppercase;
+          background-color: rgb(175, 133, 73);
+          color: white;
+          text-decoration: none;
+          padding: 10px 15px;
+          border: 2px solid transparent;
+          min-width: 180px;
+          text-align: center;
+
+          @media (max-width: $breakpoint-sm) {
+            border-radius: 5px;
+            width: 250px;
+            margin-top: 5px;
+          }
+
+          &:hover {
+            background-color: rgb(114, 86, 47);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

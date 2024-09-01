@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/fav.ico" type="image/x-icon" />
+    <script src="./script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Viga&display=swap" rel="stylesheet" />
+    <title>Rock Mountain</title>
+  </head>
+  <body>
+    <!-- upcoming_show -->
+    <section class="upcoming_show" id="Home">
+      <nav class="upcoming_show--navbar">
+        <div class="upcoming_show--navbar--logo">
+          <img src="img/logo.png" alt="" />
+        </div>
+
+        <div class="upcoming_show--navbar--links">
+          <div class="upcoming_show--navbar--links--text">
+            <a href="#Home">Home</a>
+            <a href="#Locations">Locations</a>
+            <a href="#About">About</a>
+            <a href="#Contact">Contact</a>
+          </div>
+
+          <div class="upcoming_show--navbar--links--icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="img/facebook_white.png" alt="Facebook Link" /></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="img/instagram_white.png" alt="instagram Link" /></a>
+            <a href="https://x.com" target="_blank"><img src="img/twitter_white.png" alt="X Link" /></a>
+          </div>
+        </div>
+      </nav>
+      <div class="upcoming_show--content">
+        <h1 class="upcoming_show--content--heading">Rock Mountain</h1>
+        <h2 class="upcoming_show--content--sub_heading">Discover the best live music</h2>
+        <a class="upcoming_show--content--button" href="#Locations">Upcomming Show</a>
+      </div>
+    </section>
+    <!-- featured -->
+    <section class="featured" id="About">
+      <div class="featured--content">
+        <div class="featured--content--card-container mouse-position">
+          <div class="featured--content--cards">
+            <h3>News</h3>
+            <a href="#"><img src="./img/category1.png" alt="NEW Bild" /></a>
+          </div>
+        </div>
+        <div class="featured--content--card-container mouse-position">
+          <div class="featured--content--cards">
+            <h3>Album</h3>
+            <a href="#"><img src="./img/category2.png" alt="Album Bild" /></a>
+          </div>
+        </div>
+        <div class="featured--content--card-container mouse-position">
+          <div class="featured--content--cards">
+            <h3>Store</h3>
+            <a href="#"><img src="./img/category3.png" alt="Store Bild" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- events -->
+    <section class="events">
+      <div class="events--content">
+        <img src="./img/p5.png" alt="31 State Festival Bild" />
+        <div class="events--content--description">
+          <h3>27 Sep 20</h3>
+          <h2>31 State Festival</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt dicta architecto accusamus dolorum distinctio, doloremque quae atque
+            unde esse at cupiditate sequi? Facere earum quis, suscipit corporis ullam molestias? <br /><br />
+            br Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt dicta architecto accusamus dolorum distinctio, doloremque quae
+            atque unde esse at cupiditate sequi? Facere earum quis, suscipit corporis ullam molestias?
+          </p>
+        </div>
+        <div class="events--content--vertical_line"></div>
+        <div class="events--content--buy">
+          <a href="#" class="events--content--buy--button">Buy Ticket</a>
+        </div>
+      </div>
+    </section>
+    <!-- playlist -->
+    <section class="playlist">
+      <span class="playlist--textarea">
+        Follow and listen to this playlist to <br />
+        get prepared for the show!
+      </span>
+    </section>
+    <!-- Locations -->
+    <section class="video" id="Locations"></section>
+    <!-- Contact -->
+    <footer class="contact" id="Contact">
+      <div class="contact--content">
+        <div class="contact--content--textarea">
+          Subcribe & follow to get <br />
+          updates from rock mountain!
+        </div>
+        <div class="contact--content--soziale">
+          <div class="contact--content--soziale--icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="./img/Facebook.png" alt="Facebook Link" /></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="./img/ins.png" alt="Instagram Link" /></a>
+            <a href="https://x.com" target="_blank"><img src="./img/twitter.png" alt="X Link" /></a>
+          </div>
+          <form class="contact--content--soziale--email" action="/submit" method="post">
+            <input type="email" id="email" name="email" placeholder="Email Address" required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <p class="contact--ref">Logos stammen u. A. von <a href="https://icons8.com">icons8.com</a></p>
+    </footer>
+  </body>
+</html>
