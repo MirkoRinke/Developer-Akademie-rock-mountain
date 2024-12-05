@@ -7,10 +7,6 @@
 
 Welcome to my third project as part of the Developer Academy! In this project, I created a website for Rock Mountain, where you can experience powerful rock music and captivating live performances. Dive into our music and feel the rhythm of rock!
 
-## 🔗 Links
-
-- [Live Site URL](https://gregarious-tulumba-f39d50.netlify.app/)
-
 
 ## 🛠️ Built with
 
@@ -32,4 +28,5 @@ Welcome to my third project as part of the Developer Academy! In this project, I
 
 ## ✍️ Author
 
-- Website - [My Github](https://github.com/MirkoRinke)
+ - [Webiste](https://mirkorinke.dev)
+ - [Github](https://github.com/MirkoRinke)
